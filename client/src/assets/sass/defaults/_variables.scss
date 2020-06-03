@@ -1,0 +1,33 @@
+/*-- Variables --*/
+:root {
+  //Fonts
+
+  --primary-font: "Roboto", sans-serif;
+  --font-awesome: "Font Awesome 5 Pro";
+  //Theme colors
+  --primary-color: #1898a5;
+  --primary-dark: #067b87;
+  --primary-light: #dcf7fe;
+  --secondary-color: #59169b;
+  //Complimentary colors
+  --comp-color-1: #4477ba;
+  --comp-color-2: #f39f3d;
+  //Action color
+  --action-color: #c21779;
+  //Typo colors
+  --typo-heading: #1c2b3c;
+  --typo-para: #4d4d4d;
+  --typo-para-2: #5d6d81;
+  --typo-light: #939393;
+  --border-color: #d3d3d3;
+  --input-border-color: rgba(24, 152, 165, 0.2);
+  //Others
+  --light-bg-color: #f9fafa;
+  --footer-bottom-bg: #f2f2f2;
+
+  //Border-radius
+  --radius: 0.4rem;
+
+  // Shadows
+  --card-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+}

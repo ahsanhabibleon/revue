@@ -1,0 +1,164 @@
+// Base css
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: var(--primary-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--dark-para);
+  box-sizing: border-box;
+  min-height: calc(100vh - 80px);
+}
+
+html {
+  font-size: 10px;
+  background-color: var(--color-white);
+  overflow-x: hidden;
+  // scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: var(--dark-para);
+  word-break: break-word;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  min-height: calc(100vh - 80px);
+}
+
+@include desktop {
+  .container {
+    max-width: 1260px;
+  }
+}
+
+section,
+article,
+aside,
+main {
+  position: relative;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a,
+button,
+img,
+a:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+a,
+button {
+  transition: all 0.5s;
+}
+
+a:hover {
+  color: var(--action-color);
+  text-decoration: none;
+}
+
+.border-radius {
+  border-radius: var(--border-radius);
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+.secondary-color {
+  color: var(--secondary-color);
+}
+.action-color {
+  color: var(--action-color);
+}
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #1c2b3c !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* -- Don't show links that are fragment identifiers -- */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #d3d3d3;
+    page-break-inside: avoid;
+  }
+
+  /* -- Printing Tables -- */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+.row-20 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  [class*="col-"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

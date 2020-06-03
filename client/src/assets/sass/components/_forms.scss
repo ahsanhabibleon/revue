@@ -1,0 +1,383 @@
+/* -- Forms and input fields
+---------------------------------------- -- */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+textarea,
+select:not(.languages),
+.chosen-container-single .chosen-single,
+.chosen-container .chosen-results li,
+.captcha-box {
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--typo-para);
+  font-weight: 400;
+  height: auto;
+  background: #fff;
+  box-shadow: none;
+  padding: 1.1rem 2rem;
+  @extend .border-radius;
+  // @extend .p-holder;
+  border: 2px solid var(--input-border-color);
+  outline: none;
+  transition: all 0.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: var(--radius);
+}
+
+input,
+textarea {
+  /* -- Placeholder -- */
+  &::placeholder {
+    color: var(--typo-light);
+    /* Firefox */
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--typo-light);
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--typo-light);
+  }
+
+  &.p-holder__active {
+    border-color: var(--primary-color);
+  }
+
+  &.p-holder__error {
+    border-color: #f4282d;
+  }
+}
+
+textarea {
+  white-space: pre-wrap;
+}
+
+.captcha-box {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+
+  .input-icon {
+    position: absolute;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    font-size: 1.6rem;
+    line-height: 5rem;
+    color: var(--typo-light);
+    cursor: pointer;
+  }
+}
+
+select {
+  cursor: pointer;
+
+  &:not(.languages) {
+    color: var(--typo-light);
+    padding-right: 3.5rem;
+  }
+}
+
+.focused {
+  @extend .p-holder__active;
+
+  input,
+  textarea,
+  select:not(.languages) {
+    @extend .p-holder__active;
+    color: var(--typo-para);
+  }
+}
+
+.input-error {
+  @extend .p-holder__error;
+
+  input,
+  textarea,
+  select:not(.languages) {
+    @extend .p-holder__error;
+  }
+}
+
+//Date range picker
+.daterangepicker {
+  border: none;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+
+  &::before {
+    border-bottom-color: var(--primary-color);
+  }
+
+  &::after {
+    display: none;
+  }
+
+  td.active,
+  td.active:hover {
+    background: var(--primary-color);
+  }
+
+  .drp-buttons .btn {
+    line-height: 20px;
+
+    &.cancelBtn {
+      @extend .secondary-btn;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.date-picker-wrapper {
+  position: relative;
+
+  .date-picker-label {
+    display: inline;
+
+    &::after {
+      content: "\f073";
+      font-family: var(--font-awesome);
+      font-size: 1.7rem;
+      line-height: 5rem;
+      color: var(--typo-light);
+      font-weight: 300;
+      position: absolute;
+      width: 5rem;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__double {
+    margin-right: 3rem;
+
+    @include mobile {
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.date-picker {
+  cursor: pointer;
+}
+
+.get-started-form {
+  padding: 3.7rem 3rem 4.4rem;
+}
+
+.search-form {
+  position: relative;
+
+  input {
+    padding-right: 6rem;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6rem;
+    height: 5rem;
+    background: transparent;
+    border: none;
+    transition: all 0.3s;
+
+    i {
+      font-size: 1.5rem;
+      line-height: 5rem;
+      color: var(--typo-light);
+      font-weight: 400;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: var(--action-color);
+
+      i {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.schedule-massage-form {
+  button,
+  .btn-primary {
+    margin-top: 1rem;
+  }
+}
+
+.fixed-width-form {
+  width: 100%;
+  max-width: 91rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.select-wrapper {
+  position: relative;
+
+  &::after {
+    content: "\f107";
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    font-family: var(--font-awesome);
+    font-size: 1.7rem;
+    line-height: 5rem;
+    color: var(--typo-light);
+  }
+}
+
+.custom-radio,
+.custom-checkbox {
+  margin: 0 0 10px;
+}
+
+.error {
+  font-size: 14px;
+  line-height: 24px;
+  color: #f4282d;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.double-date-picker {
+  position: absolute;
+  visibility: hidden;
+}
+
+.date-picker-input {
+  font-size: 15px;
+  line-height: 46px;
+  color: var(--typo-para-2);
+  font-weight: 500;
+  padding: 0 2rem;
+  border: 2px solid color(border-color);
+  border-radius: var(--radius);
+
+  i {
+    margin-left: 8px;
+  }
+
+  span {
+    color: inherit;
+    padding: 0 15px 0 18px;
+  }
+
+  @include mobile {
+    font-size: 13px;
+  }
+}
+
+// Custom Checkbox and radio button
+input[type="checkbox"],
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+
+  ~ label {
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    color: var(--typo-light);
+    font-weight: 400;
+    padding-left: 2.3rem;
+    cursor: pointer;
+    margin: 0;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0.6rem;
+      left: 0;
+      width: 1.4rem;
+      height: 1.4rem;
+      background-color: #fff;
+      border: 2px solid var(--input-border-color);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0.9rem;
+      left: 0.2rem;
+      width: 1rem;
+      height: 0.5rem;
+      background-color: transparent;
+      border-bottom: 0.2rem solid #fff;
+      border-left: 0.2rem solid #fff;
+      border-radius: 0.2rem;
+      transform: rotate(-45deg);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+
+  &:checked {
+    ~ label {
+      &::before {
+        background-color: var(--primary-color);
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+input[type="radio"] {
+  ~ label {
+    &::before {
+      border-radius: 50%;
+    }
+
+    &::after {
+      width: 0.8rem;
+      height: 0.8rem;
+      left: 0.3rem;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+}

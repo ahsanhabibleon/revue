@@ -1,0 +1,26 @@
+//Social icons
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        margin: 5px 10px 5px 0;
+
+        &:nth-last-of-type(1) {
+            margin-right: 0;
+        }
+
+        img {
+            width: 30px;
+            height: auto;
+            transition: all .3s;
+        }
+
+        &:hover {
+            img {
+                opacity: .7;
+            }
+        }
+    }
+}

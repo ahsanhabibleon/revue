@@ -1,0 +1,63 @@
+/* -- Table Styles
+------------------------------------ -- */
+.common-table {
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  table {
+    width: 100%;
+  }
+
+  thead,
+  .table-footer {
+    background: var(--primary-color);
+
+    th,
+    td {
+      font-size: 1.7rem;
+      line-height: 3rem;
+      color: #fff;
+      font-weight: 400;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+
+  th,
+  td {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    padding: 1rem 0;
+    color: #4d4d4d;
+    text-align: right;
+
+    &:first-child {
+      text-align: left;
+      padding-left: 2rem;
+    }
+
+    &:last-child {
+      padding-right: 2rem;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  tbody {
+    tr {
+      &:not(.table-footer) {
+        &:nth-of-type(odd) {
+          background: var(--light-bg-color);
+        }
+
+        &:nth-of-type(even) {
+          background: #efefef;
+        }
+      }
+    }
+  }
+}

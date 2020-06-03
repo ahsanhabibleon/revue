@@ -1,0 +1,92 @@
+//Pagination
+
+
+.page-navigation {}
+
+.pagination {
+    display: inline-flex;
+
+    a {
+        display: block;
+        font-size: 1.7rem;
+        line-height: 4rem;
+        min-width: 4rem;
+        height: 4rem;
+        color: var(--typo-light);
+        text-align: center;
+        padding: 0 1.5rem;
+        transition: all .3s;
+    }
+
+    i {
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+    }
+
+    li {
+        background: #fff;
+        border: 1px solid var(--border-color);
+        margin-right: -1px;
+        transition: all .3s;
+
+        &:not(:nth-last-of-type(1)) {
+            border-right: 1px solid var(--border-color);
+        }
+
+        margin-bottom: 0;
+
+        &:hover,
+        &.active {
+            background: var(--action-color);
+            border-color: var(--action-color);
+
+            a,
+            i {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        &:first-child {
+            border-top-left-radius: var(--radius);
+            border-bottom-left-radius: var(--radius);
+        }
+
+        &:last-child {
+            border-top-right-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+        }
+
+        // &.disabled {
+        //     border-color: lighten($color: var(--border-color), $amount: 8) !important;
+        //     color: lighten($color: var(--typo-light), $amount: 8) !important;
+        //     a {
+        //         color: lighten($color: var(--typo-light), $amount: 8) !important;
+        //     }
+        // }
+
+        &.disabled {
+            opacity: .5;
+        }
+    }
+
+    &_prev-next {
+        li {
+            border: none;
+
+            a {
+                border: 1px solid var(--border-color);
+                border-top-left-radius: var(--radius);
+                border-bottom-left-radius: var(--radius);
+            }
+        }
+
+        .primary-btn {
+            color: #fff;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-color: var(--action-color);
+        }
+    }
+}

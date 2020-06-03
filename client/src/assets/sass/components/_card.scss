@@ -1,0 +1,20 @@
+// Card
+.card {
+  background-color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 6rem;
+  border: none;
+  margin-bottom: 6rem;
+
+  @include tablet-mini {
+    padding: 3rem 2rem;
+    margin-bottom: 0;
+  }
+}
+.login-card {
+  min-height: 65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

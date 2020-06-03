@@ -1,0 +1,54 @@
+/* Mixins */
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet-mini {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin only-chrome {
+  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    @content;
+  }
+}
+
+@mixin only-moz {
+  @media all and (min--moz-device-pixel-ratio: 0) and (min-resolution: 3e1dpcm) {
+    @content;
+  }
+}
+
+@mixin only-ie {
+  @media screen and (min-width: 0\0) {
+    @content;
+  }
+}
